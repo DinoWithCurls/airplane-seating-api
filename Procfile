@@ -1,0 +1,1 @@
+web: gunicorn airplane-seating:app
