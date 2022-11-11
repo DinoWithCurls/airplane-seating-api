@@ -1,14 +1,24 @@
 
-How to make a curl request, based on the test example:
+# Airplane Seating Algorithm API
 
+## Steps to run
+
+1. Run the following command:
+```
+python server.py
+```
+
+2. On a parallel terminal tab, run the curl request
+```
 curl \
     --header "Content-Type: application/json" \
     --request POST \
     --data '{"seatsGrid": [[3,2], [4,3], [2,3], [3,4]] , "passengers": 30}' \
     http://localhost:5000/airplane-algo
+```
 
 The response will be of form 
-
+```
 {
   "arrangement": [
     [
@@ -33,3 +43,21 @@ The response will be of form
     ]
   ]
 }
+```
+
+To test the code on Postman:
+1. Run server.py
+2. On the request URL input, enter the following, and set the request header to POST:
+```
+http://localhost:5000/airplane-algo
+```
+3. On the Body tab, enter the following JSON text
+```
+{
+    "seatsGrid": [[3,2], [4,3], [2,3], [3,4]],
+    "passengers": 30
+}
+```
+4. Make the request.
+
+The output will be same as above.
